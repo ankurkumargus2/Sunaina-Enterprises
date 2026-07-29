@@ -241,3 +241,72 @@ function getByClass(className) {
 console.log("%c🎉 Sunaina Enterprises Loaded Successfully!", "color: #0B3B8C; font-size: 16px; font-weight: bold;");
 console.log("%cTheme: %s", "color: #C79C2B; font-weight: bold;", 
   document.body.classList.contains("dark-mode") ? "Dark" : "Light");
+  
+
+
+
+// ==================== REGISTRATION FORM ====================
+
+const regForm = document.getElementById("registrationForm");
+
+if (regForm) {
+
+  regForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("🎉 Registration Successful!");
+
+    this.reset();
+
+  });
+
+}
+
+
+// ==================== FEEDBACK FORM ====================
+
+const feedbackForm = document.getElementById("feedbackForm");
+
+if (feedbackForm) {
+
+  feedbackForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("❤️ Thank you for your feedback!");
+
+    this.reset();
+
+  });
+
+}
+/* ==========================
+      IMAGE POPUP
+========================== */
+
+function openImage(image){
+
+    document.getElementById("imagePopup").style.display="flex";
+
+    document.getElementById("popupImage").src=image;
+
+}
+
+function closeImage(){
+
+    document.getElementById("imagePopup").style.display="none";
+
+}
+
+window.addEventListener("click",function(e){
+
+    const popup=document.getElementById("imagePopup");
+
+    if(e.target===popup){
+
+        popup.style.display="none";
+
+    }
+
+});

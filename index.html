@@ -37,6 +37,8 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#credits">Credits</a></li>
+        <li><a href="#registration">Registration</a></li>
+<li><a href="#feedback">Feedback</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -57,6 +59,9 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#credits">Credits</a></li>
+      <li><a href="#registration">Registration</a></li>
+<li><a href="#feedback">Feedback</a></li>
+      
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -129,25 +134,25 @@
         <div class="product-grid">
 
             <div class="product-card">
-                <img src="p6.jpeg" alt="Product 1">
+               <img src="p6.jpeg"class="gallery-img"onclick="openImage(this.src)" alt ="Product 1">
                 <h3>Deodorants</h3>
                 <p>solid,long-lasting fragerance that  stays with you all day.</p>
             </div>
 
             <div class="product-card">
-                <img src="p7.jpeg" alt="Product 2">
+                <img src="p7.jpeg" class="gallery-img"onclick="openImage(this.src)" alt ="Product 2">
                 <h3>Perfumes</h3>
                 <p>Rich signature scents for effortless everyday wear.</p>
             </div>
 
             <div class="product-card">
-                <img src="p8.jpeg" alt="Product 3">
+               <img src="p8.jpeg"class="gallery-img"onclick="openImage(this.src)"> alt="Product 3">
                 <h3>Air Fresheners</h3>
                 <p>instant freshness that fills your space in seconds</p>
             </div>
 
             <div class="product-card">
-                <img src="p9.jpeg" alt="Product 4">
+               <img src="p9.jpeg"class="gallery-img"onclick="openImage(this.src)">  alt="Product 4">
                 <h3>Fresh Room Fresheners</h3>
                 <p>No Gas, rich fragrances for every space</p>
             </div>
@@ -196,6 +201,121 @@
     </div>
 
 </section>
+<!-- ==========================
+        REGISTRATION
+========================== -->
+
+<section class="section" id="registration">
+
+<div class="container">
+
+<h2 class="section-title">Registration Form</h2>
+
+<p class="section-sub">
+Register with Sunaina Enterprises
+</p>
+
+<form id="registrationForm" class="form-box">
+
+<input type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input type="tel"
+id="phone"
+placeholder="Mobile Number"
+required>
+
+<input type="text"
+id="business"
+placeholder="Business Name">
+
+<textarea
+id="address"
+rows="4"
+placeholder="Address"></textarea>
+
+<button type="submit" class="btn">
+Register Now
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================
+        FEEDBACK
+========================== -->
+
+<section class="section" id="feedback">
+
+<div class="container">
+
+<h2 class="section-title">
+Customer Feedback
+</h2>
+
+<p class="section-sub">
+We value your feedback.
+</p>
+
+<form id="feedbackForm" class="form-box">
+
+<input
+type="text"
+id="customerName"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+id="customerEmail"
+placeholder="Email"
+required>
+
+<select id="rating">
+
+<option>★★★★★ Excellent</option>
+
+<option>★★★★ Very Good</option>
+
+<option>★★★ Good</option>
+
+<option>★★ Average</option>
+
+<option>★ Poor</option>
+
+</select>
+
+<textarea
+id="message"
+rows="5"
+placeholder="Write your feedback..."
+required></textarea>
+
+<button
+type="submit"
+class="btn">
+
+Submit Feedback
+
+</button>
+
+</form>
+
+</div>
+
+</section>
 <section class="section" id="contact">
   <div class="container">
     <h2 class="section-title">Contact Us</h2>
@@ -219,7 +339,7 @@
 
       <p style="margin-top: 20px;">
         <strong>Location:</strong><br>
-        India, Bihar ,Patna, Pin code:801503
+        India, New mubarakpur Danapur cantt patna,Pincode: 801503
 
       </p>
     </div>
@@ -230,6 +350,15 @@
     <p>&copy; 2026 Sunaina Enterprises. All Rights Reserved.</p>
   </div>
 </footer>
+<!-- IMAGE POPUP -->
+
+<div id="imagePopup" class="popup">
+
+    <span class="close" onclick="closeImage()">&times;</span>
+
+    <img id="popupImage">
+
+</div>
 <script src="script.js"></script>
 
 </body>

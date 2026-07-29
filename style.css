@@ -747,3 +747,100 @@ footer p{
     color:#555;
     line-height:1.8;
 }
+/* ==========================
+        FORM
+========================== */
+
+.form-box{
+
+max-width:700px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select{
+
+padding:15px;
+
+font-size:16px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus{
+
+border-color:#0B3B8C;
+
+box-shadow:0 0 10px rgba(11,59,140,.2);
+
+}
+
+.form-box textarea{
+
+resize:none;
+
+}
+
+.form-box button{
+
+align-self:center;
+
+}
+/* ==========================
+        IMAGE POPUP
+========================== */
+
+.gallery-img{
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    z-index:99999;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+}
