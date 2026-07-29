@@ -1,0 +1,663 @@
+/* ==========================
+   SUNAINA ENTERPRISES V2
+   Premium Corporate Theme
+   FULLY CORRECTED & COMPLETE
+========================== */
+
+:root{
+  --primary:#0B3B8C;
+  --secondary:#C79C2B;
+  --dark:#111827;
+  --light:#f8fafc;
+  --white:#ffffff;
+  --gray:#6b7280;
+  --shadow:0 15px 35px rgba(0,0,0,.12);
+  --radius:18px;
+}
+
+/* Reset */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f4f7fb;
+  color:#222;
+  line-height:1.7;
+  transition: background .3s, color .3s;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+
+/* ==========================
+   LOADING SCREEN
+========================== */
+
+#loadingOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0B3B8C 0%, #C79C2B 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity .5s ease-out;
+}
+
+.loader{
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  animation: fadeInScale .8s ease-out;
+  letter-spacing: 2px;
+}
+
+@keyframes fadeInScale{
+  from{
+    opacity: 0;
+    transform: scale(.8);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ==========================
+        HEADER
+========================== */
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(11,59,140,.95);
+  backdrop-filter:blur(10px);
+  z-index:999;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+  transition: all .3s ease;
+}
+
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+
+.brand{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:white;
+  transition: opacity .3s;
+}
+
+.brand:hover{
+  opacity: .8;
+}
+
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+    margin-right:12px;
+    transition: transform .3s;
+}
+
+.logo:hover{
+  transform: scale(1.05);
+}
+
+
+.brand-name{
+  font-size:24px;
+  font-weight:700;
+  display:block;
+}
+
+
+.brand-tag{
+  font-size:13px;
+  opacity:.8;
+}
+
+
+/* Navigation */
+
+.main-nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+
+.main-nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+  position: relative;
+}
+
+.main-nav a::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width .3s;
+}
+
+.main-nav a:hover::after{
+  width: 100%;
+}
+
+.main-nav a:hover{
+  color:var(--secondary);
+}
+
+/* Dark Mode & Mobile Menu Buttons */
+
+#darkToggle, #mobileMenuBtn{
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform .3s;
+  display: none;
+}
+
+#darkToggle:hover, #mobileMenuBtn:hover{
+  transform: scale(1.2);
+}
+
+
+/* ==========================
+        BUTTONS
+========================== */
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:50px;
+  background:var(--secondary);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition: all .3s;
+  box-shadow:var(--shadow);
+  border: none;
+  cursor: pointer;
+}
+
+
+.btn:hover{
+  transform:translateY(-4px);
+  background:#d7ad39;
+  box-shadow: 0 20px 40px rgba(199, 156, 43, .3);
+}
+
+.btn:active{
+  transform: translateY(-2px);
+}
+
+.btn.ghost{
+  background:transparent;
+  border:2px solid white;
+  box-shadow: none;
+}
+
+.btn.ghost:hover{
+  background: rgba(255,255,255,.1);
+}
+
+
+
+/* ==========================
+        HERO SECTION
+========================== */
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    padding-top: 90px;
+}
+
+.hero-image{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(11,59,140,.65);
+    z-index:-1;
+}
+
+.site-title{
+  font-size:64px;
+  font-family:'Playfair Display',serif;
+  margin-bottom:15px;
+  animation: slideInDown .8s ease-out;
+}
+
+.site-sub{
+  font-size:22px;
+  max-width:850px;
+  margin:0 auto 25px;
+  animation: slideInUp .8s ease-out .2s backwards;
+}
+
+.hero-ctas{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  animation: slideInUp .8s ease-out .4s backwards;
+}
+
+@keyframes slideInDown{
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* ==========================
+        SECTIONS
+========================== */
+
+.section{
+  padding:90px 0;
+  animation: fadeIn .8s ease-out;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:10px;
+  color:var(--primary);
+  font-family:'Playfair Display',serif;
+}
+
+.section-sub{
+  text-align:center;
+  color:var(--gray);
+  margin-bottom:50px;
+}
+
+
+
+/* ==========================
+        ABOUT SECTION
+========================== */
+
+.about-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    width:420px;
+    max-width:100%;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+    transition: transform .3s;
+}
+
+.about-image:hover{
+  transform: translateY(-10px);
+}
+
+
+
+/* ==========================
+        SERVICES SECTION
+========================== */
+
+.service-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.service-image{
+  width: 420px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.2);
+  transition: transform .3s;
+  object-fit: cover;
+}
+
+.service-image:hover{
+  transform: translateY(-10px);
+}
+
+.service-content .glass{
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-content h3{
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.service-content p{
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+
+/* ==========================
+        GLASS CARD
+========================== */
+
+.glass{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-radius:var(--radius);
+  padding:30px;
+  box-shadow:var(--shadow);
+  transition: all .3s ease;
+}
+
+.glass:hover{
+  background: rgba(255,255,255,.85);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.15);
+}
+
+.glass h3{
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.glass p{
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+
+
+/* ==========================
+        FOOTER
+========================== */
+
+footer{
+  background: var(--dark);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  font-size: 14px;
+  opacity: .8;
+}
+
+
+
+/* ==========================
+        MOBILE NAV
+========================== */
+
+.mobile-nav{
+  display:none;
+  background:var(--primary);
+  padding:20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.mobile-nav.active{
+  display:block;
+}
+
+.mobile-nav ul{
+  list-style:none;
+}
+
+.mobile-nav a{
+  color:white;
+  text-decoration:none;
+  display:block;
+  padding:15px;
+  transition: all .3s;
+  border-left: 3px solid transparent;
+  margin-left: 10px;
+}
+
+.mobile-nav a:hover{
+  border-left-color: var(--secondary);
+  color: var(--secondary);
+}
+
+
+
+/* Sticky Header */
+
+.sticky{
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  padding: 10px 0;
+}
+
+
+
+/* ==========================
+        DARK MODE
+========================== */
+
+.dark-mode{
+  background:#111;
+  color:#f0f0f0;
+}
+
+.dark-mode .glass{
+  background: rgba(30, 30, 30, .8);
+  color: #f0f0f0;
+}
+
+.dark-mode .glass h3,
+.dark-mode .section-title{
+  color:#d7ad39;
+}
+
+.dark-mode footer{
+  background: #000;
+  border-top: 1px solid #333;
+}
+
+.dark-mode .site-header{
+  background: rgba(0, 0, 0, .95);
+}
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+  .site-title{
+    font-size:42px;
+  }
+
+  .site-sub{
+    font-size:18px;
+  }
+
+  .main-nav{
+    display:none;
+  }
+
+  .main-nav a::after{
+    display: none;
+  }
+
+  #darkToggle, #mobileMenuBtn{
+    display: block;
+  }
+
+  .header-inner{
+    flex-direction:row;
+    gap:15px;
+    justify-content: space-between;
+  }
+
+  .brand-name{
+    font-size:20px;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  .about-content,
+  .service-content{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image,
+  .service-image{
+    width: 100%;
+  }
+
+  .section{
+    padding: 60px 0;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .site-title{
+    font-size:34px;
+  }
+
+  .site-sub{
+    font-size: 16px;
+  }
+
+  .btn{
+    padding:12px 22px;
+    font-size: 14px;
+  }
+
+  .section-title{
+    font-size: 28px;
+  }
+
+  .glass{
+    padding: 20px;
+  }
+
+  .hero-ctas{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .section{
+    padding: 40px 0;
+  }
+
+}
